@@ -2,12 +2,16 @@
  
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var plumber = require ('gulp-plumber');
+var notify = require ('gulp-notify')
 var browserSync = require('browser-sync').create();
 
 gulp.task('sass', function () {
   return gulp.src('./*.scss')
+   .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./css'))
+    .pipe(notify("CSS has completed"))
     .pipe(browserSync.reload({
       stream: true
     })

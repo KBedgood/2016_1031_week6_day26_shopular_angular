@@ -1,13 +1,71 @@
-            // @import "mixins";
-            // Roboto:300,300i,400,500,700
-            // body {
-            //             font-family: 'Roboto', sans-serif;
-            //             line-height: 1.4em;
-            // }
-     
-            .container {
-                        width: 990px;
-                        display: block;
-                        margin: 0 auto;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Montserrat', sans-serif;
+// Montserrat:400,700
+// Open+Sans:300,400,600
+$light-grey: #EFEFEF;
+$dark-grey: #646668;
+$accent: #C63030;
+body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.4em;
+            color: black;
+}
+
+.nav {
+            background-color: $light-grey;
+            img {
+                        max-width: 222px;
+                        padding: 10px;
+                        margin-left: 40px;
             }
-            
+}
+
+table,
+th,
+td {
+            padding: 15px;
+            padding-right: 35px;
+            text-align: left;
+            padding-left: 76px;
+            width: 200px;
+            text-transform: capitalize;
+            color: $dark-grey;
+}
+
+.container {
+            .data-table {
+                        margin-top: 55px;
+                        h1 {
+                                    font-family: Montserrat;
+                                    font-size: 34px;
+                                    font-weight: 400;
+                                    text-align: center;
+                                    letter-spacing: 1px;
+                                    color: #C63030;
+                        }
+                        table {
+                                    table-layout: fixed;
+                                    margin: 0 auto;
+                                    tr.col-names {
+                                                width: 70px;
+                                                font-size: 16px;
+                                                font-weight: 300;
+                                    }
+                                    td.col-content {
+                                                font-size: 12px;
+                                    }
+                        }
+            }
+}
+
+tr:nth-child(even) {
+            background: null
+}
+
+tr:nth-child(odd) {
+            background: $light-grey;
+}
+
+.saleTag {
+      float: right;
+}

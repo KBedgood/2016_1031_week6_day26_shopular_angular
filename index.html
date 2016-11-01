@@ -3,7 +3,7 @@
 
 <head>
             <title>Week 6. Day 31. kb</title>
-            <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600" rel="stylesheet">
             <meta charset="UTF-8">
             <meta name='author' content='Kristie Bedgood'>
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -11,38 +11,38 @@
             <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
-
-
-
-
-    <header ng-controller='HeaderController as header'>
-      <h1>{{header.title}}</h1>
-    </header>
-
-
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-    <script src='angular.js'></script>
-  </body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-            <script src=" http://code.jquery.com/jquery-1.12.4.min.js " integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin=" anonymous "></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.16.4/lodash.js "></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa " crossorigin="anonymous "></script>
-            <script type="text/javascript " src="main.js "></script>
+<body ng-controller='StockController as stock'>
+            <div class="container-fluid">
+                        <div class="row nav">
+                                    <div class="col-md-12">
+                                                <img src="Images/logo.png">
+                                    </div>
+                        </div>
+            </div>
+            <div class="container">
+                        <div class="row data-table">
+                                    <div class="col-md-12">
+                                                <h1 class="data-title">Inventory</h1>
+                                                <table>
+                                                            <tr class="col-names">
+                                                                        <th>Name</th>
+                                                                        <th>Sale</th>
+                                                            
+                                                                        <th>Quantity</th>
+                                                                        <th>Color</th>
+                                                            </tr>
+                                                            <tr ng-repeat='item in stock.items' class="col-content">
+                                                                        <td>{{item.name}}</td>
+                                                                        <td>{{(item.price-item.discount)*stock.tax | currency}}<img src="Images/98350f05-sale_2.png" alt="" ng-show="item.discount > 0" class="saleTag"></td>
+                                                                        <td>{{item.quantity}}</td>
+                                                                        <td>{{item.color}}</td>
+                                                            </tr>
+                                                </table>
+                                    </div>
+                        </div>
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+            <script src='angular.js'></script>
 </body>
 
 </html>
