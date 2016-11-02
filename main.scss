@@ -67,5 +67,101 @@ tr:nth-child(odd) {
 }
 
 .saleTag {
-      float: right;
+            float: right;
+}
+
+.userForm {
+            margin-top: 20px;
+            margin-bottom: 85px;
+            text-align: center;
+            .input-block {
+                        display: inline-block;
+            }
+            label {
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 600;
+                        color: black;
+                        text-transform: uppercase;
+                        display: block;
+                        padding-left: 15px;
+                        font-size: 10px;
+                        text-align: left;
+            }
+            input {
+                        color: $dark-grey;
+                        padding-top: 11px;
+                        padding-bottom: 11px;
+                        width: 98%;
+                        &.submit {
+                                    padding: 20px;
+                        }
+                        &.ng-invalid {
+                                    border: 1.75px solid $accent;
+                        }
+            }
+}
+
+input[type=submit] {
+            background-color: #646668;
+            color: white;
+            border: none;
+            width: 80px;
+            text-transform: uppercase;
+            padding-left: 6px;
+}
+
+input[type=text] {
+            padding-left: 11px;
+            color: purple;
+}
+
+input[type=number] {
+            padding-left: 11px;
+            color: purple;
+}
+
+.add-inventory {
+            font-family: Montserrat;
+            font-size: 34px;
+            font-weight: 400;
+            text-align: center;
+            letter-spacing: 1px;
+            color: #C63030;
+            padding-top: 85px;
+            border-bottom: 2px solid $light-grey;
+            padding-bottom: 10px;
+}
+
+// –––––––––––––––––––––––––––––––––––––
+// Style Input Placeholder Text
+// –––––––––––––––––––––––––––––––––––––
+
+::-webkit-input-placeholder {
+            color: $dark-grey;
+            font-size: 14px;
+            padding-left: 2px;
+            padding-bottom: 7px;
+}
+
+:-moz-placeholder {
+            /* Firefox 18- */
+            color: $dark-grey;
+            font-size: 14px;
+            padding-left: 2px;
+            padding-bottom: 7px;
+}
+
+::-moz-placeholder {
+            /* Firefox 19+ */
+            color: $dark-grey;
+            font-size: 14px;
+            padding-left: 2px;
+            padding-bottom: 7px;
+}
+
+:-ms-input-placeholder {
+            color: $dark-grey;
+            font-size: 14px;
+            padding-left: 2px;
+            padding-bottom: 7px;
 }

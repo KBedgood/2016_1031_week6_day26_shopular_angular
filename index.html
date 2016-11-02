@@ -27,21 +27,48 @@
                                                             <tr class="col-names">
                                                                         <th>Name</th>
                                                                         <th>Sale</th>
-                                                            
                                                                         <th>Quantity</th>
                                                                         <th>Color</th>
                                                             </tr>
-                                                            <tr ng-repeat='item in stock.items' class="col-content">
+                                                            <tr ng-repeat="item in stock.items  | orderBy: '-quantity'" class="col-content">
                                                                         <td>{{item.name}}</td>
                                                                         <td>{{(item.price-item.discount)*stock.tax | currency}}<img src="Images/98350f05-sale_2.png" alt="" ng-show="item.discount > 0" class="saleTag"></td>
                                                                         <td>{{item.quantity}}</td>
                                                                         <td>{{item.color}}</td>
                                                             </tr>
                                                 </table>
+                                                <section>
+                                                            <h3 class="add-inventory">Add Inventory +</h3>
+                                                            <form novalidate ng-submit="stock.submit(stock.form)" name='userData' class="userForm">
+                                                                        <div class="input-block product">
+                                                                                    <label>Product Name</label>
+                                                                                    <input type='text' placeholder="Product Name..." ng-model='stock.form.name' required>
+                                                                        </div>
+                                                                        <div class="input-block price">
+                                                                                    <label>Price</label>
+                                                                                    <input type='number' placeholder="Price..." ng-model='stock.form.price' required>
+                                                                        </div>
+                                                                        <div class="input-block quantity">
+                                                                                    <label>Quantity</label>
+                                                                                    <input type="number" placeholder="Quantity..." name="quantity" min="1" max="" ng-model='stock.form.quantity' required>
+                                                                        </div>
+                                                                        <div class="input-block color">
+                                                                                    <label>Color</label>
+                                                                                    <input type='text' placeholder="Color..." ng-model='stock.form.color' required>
+                                                                        </div>
+                                                                        <div class="input-block discount">
+                                                                                    <label>Discount</label>
+                                                                                    <input type='number' placeholder="Discount... " ng-model='stock.form.discount'>
+                                                                        </div>
+                                                                             <div class="input-block" id="submit">
+                                                                        <input type="submit" name="">
+                                                                          </div>
+                                                            </form>
+                                                </section>
                                     </div>
                         </div>
             </div>
-            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js "></script>
             <script src='angular.js'></script>
 </body>
 

@@ -48,3 +48,81 @@ tr:nth-child(odd) {
 
 .saleTag {
   float: right; }
+
+.userForm {
+  margin-top: 20px;
+  margin-bottom: 85px;
+  text-align: center; }
+  .userForm .input-block {
+    display: inline-block; }
+  .userForm label {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+    display: block;
+    padding-left: 15px;
+    font-size: 10px;
+    text-align: left; }
+  .userForm input {
+    color: #646668;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    width: 98%; }
+    .userForm input.submit {
+      padding: 20px; }
+    .userForm input.ng-invalid {
+      border: 1.75px solid #C63030; }
+
+input[type=submit] {
+  background-color: #646668;
+  color: white;
+  border: none;
+  width: 80px;
+  text-transform: uppercase;
+  padding-left: 6px; }
+
+input[type=text] {
+  padding-left: 11px;
+  color: purple; }
+
+input[type=number] {
+  padding-left: 11px;
+  color: purple; }
+
+.add-inventory {
+  font-family: Montserrat;
+  font-size: 34px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #C63030;
+  padding-top: 85px;
+  border-bottom: 2px solid #EFEFEF;
+  padding-bottom: 10px; }
+
+::-webkit-input-placeholder {
+  color: #646668;
+  font-size: 14px;
+  padding-left: 2px;
+  padding-bottom: 7px; }
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #646668;
+  font-size: 14px;
+  padding-left: 2px;
+  padding-bottom: 7px; }
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #646668;
+  font-size: 14px;
+  padding-left: 2px;
+  padding-bottom: 7px; }
+
+:-ms-input-placeholder {
+  color: #646668;
+  font-size: 14px;
+  padding-left: 2px;
+  padding-bottom: 7px; }
