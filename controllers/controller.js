@@ -1,22 +1,29 @@
 (function() {
         'use strict';
 
+
+        // The CONTROLLER is always read first – it's like my normal JS file
+
         // Save all inventory data in an array:
         angular
-            .module('shopular')
-            .controller('StockController', function StockController(storage) {
+            .module('localHost')
+            .controller('userDetails', function LocalHostController(details) {
 
-                // Calculates Tax
-                let vm = this;
-                vm.tax = 1.065;
+                let newUser = {
+                    name: user.name,
+                    age: user.age,
+                    id: date(now),
+                    likesJS: 
 
-                // Pushes User Info Onto Object On Submit
-                vm.submit = function(newItem) {
-                    vm.form = {};
-                    vm.items = storage.addData(newItem);
                 }
 
-                vm.items =  storage.getData();
+                // Pushes User Info Onto Object On Submit
+                vm.submit = function(newUser) {
+                    vm.form = {};
+                    vm.items = details.addData(newItem);
+                }
+
+                vm.items =  details.getData();
 
             });
 })();

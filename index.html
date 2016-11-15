@@ -1,77 +1,62 @@
 <!DOCTYPE html>
-<html ng-app='shopular'>
+<html ng-app='localHost'>
 
 <head>
-            <title>Week 6. Day 31. kb</title>
-            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600" rel="stylesheet">
-            <meta charset="UTF-8">
-            <meta name='author' content='Kristie Bedgood'>
-            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-            <link rel="stylesheet" type="text/css" href="css/main.css">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Week 8. Day 1. kb</title>
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600" rel="stylesheet">
+     <meta charset="UTF-8">
+     <meta name='author' content='Kristie Bedgood'>
+     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="css/main.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body ng-controller='StockController as stock'>
-            <div class="container-fluid">
-                        <div class="row nav">
-                                    <div class="col-md-12">
-                                                <img src="Images/logo.png">
-                                    </div>
-                        </div>
-            </div>
-            <div class="container">
-                        <div class="row data-table">
-                                    <div class="col-md-12">
-                                                <h1 class="data-title">Inventory</h1>
-                                                <table>
-                                                            <tr class="col-names">
-                                                                        <th>Name</th>
-                                                                        <th>Sale</th>
-                                                                        <th>Quantity</th>
-                                                                        <th>Color</th>
-                                                            </tr>
-                                                            <tr ng-repeat="item in stock.items  | orderBy: '-quantity'" class="col-content">
-                                                                        <td>{{item.name}}</td>
-                                                                        <td>{{(item.price-item.discount)*stock.tax | currency}}<img src="Images/98350f05-sale_2.png" alt="" ng-show="item.discount > 0" class="saleTag"></td>
-                                                                        <td>{{item.quantity}}</td>
-                                                                        <td>{{item.color}}</td>
-                                                            </tr>
-                                                </table>
-                                                <section>
-                                                            <h3 class="add-inventory">Add Inventory +</h3>
-                                                            <form novalidate ng-submit="stock.submit(stock.form)" name='userData' class="userForm">
-                                                                        <div class="input-block product">
-                                                                                    <label>Product Name</label>
-                                                                                    <input type='text' placeholder="Product Name..." ng-model='stock.form.name' required>
-                                                                        </div>
-                                                                        <div class="input-block price">
-                                                                                    <label>Price</label>
-                                                                                    <input type='number' placeholder="Price..." ng-model='stock.form.price' required>
-                                                                        </div>
-                                                                        <div class="input-block quantity">
-                                                                                    <label>Quantity</label>
-                                                                                    <input type="number" placeholder="Quantity..." name="quantity" min="1" max="" ng-model='stock.form.quantity' required>
-                                                                        </div>
-                                                                        <div class="input-block color">
-                                                                                    <label>Color</label>
-                                                                                    <input type='text' placeholder="Color..." ng-model='stock.form.color' required>
-                                                                        </div>
-                                                                        <div class="input-block discount">
-                                                                                    <label>Discount</label>
-                                                                                    <input type='number' placeholder="Discount... " ng-model='stock.form.discount'>
-                                                                        </div>
-                                                                             <div class="input-block" id="submit">
-                                                                        <input type="submit" name="">
-                                                                          </div>
-                                                            </form>
-                                                </section>
-                                    </div>
-                        </div>
-            </div>
-            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js "></script>
-            <script src='main.js'></script>
-            <script src='factories/factory.js'></script>
-            <script src='controllers/controller.js'></script>
+<body ng-controller='LocalHostController as storage'>
+     <div class="container">
+          <table class="table table-hover table-bordered">
+               <thead>
+                    <h1>getting to NODE you.</h1>
+                    <tr>
+                         <th>Name</th>
+                         <th>Age</th>
+                         <th>Enjoys Javascript</th>
+                    </tr>
+               </thead>
+               <tbody>
+                    <tr>
+                         <td>Taco</td>
+                         <td>99</td>
+                         <td>Nope.</td>
+                    </tr>
+               </tbody>
+          </table>
+          <form novalidate ng-submit="storage.submit(storage.form)">
+               <div class="formData">
+                    <div class="form-group">
+                         <label for="usr">Name:</label>
+                         <input type="text" class="form-control" id="usr" ng-model='xx.xx.name'>
+                    </div>
+                    <div class="form-group">
+                         <label for="age">Age:</label>
+                         <input type="number" class="form-control" id="" ng-model='xx.xx.age'>
+                    </div>
+                    <div class="form-group">
+                         <label for="usr">Enjoys Javascript:</label>
+                         <br>
+                         <label class="checkbox-inline">
+                              <input type="checkbox" value="true" ng-model='xx.xx.true'>Yep!</label>
+                         <label class="checkbox-inline">
+                              <input type="checkbox" value="false" ng-model='xx.xx.false'>Nope.</label>
+                    </div>
+                    <input type="submit" value="Submit">
+               </div>
+          </form>
+     </div>
+     </div>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js "></script>
+     <script src='main.js'></script>
+     <script src='factories/factory.js'></script>
+     <script src='controllers/controller.js'></script>
 </body>
 
 </html>
